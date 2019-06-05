@@ -2,8 +2,6 @@
 
 This app is a template application using ASP.NET Core 2.1 for a REST/JSON API server and React for a web client.
 
-![screen recording 2017-06-10 at 04 12 pm](https://user-images.githubusercontent.com/759811/27006360-bd3b8152-4df7-11e7-9011-f22204abe4d5.gif)
-
 ## Overview of Stack
 - Server
   - ASP.NET Core 2.1
