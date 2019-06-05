@@ -1,0 +1,167 @@
+// fonts
+
+$bebasbold = "Bebas Neue Bold", Arial, sans-serif
+$bebasregular = "Bebas Neue Regular", Arial, sans-serif;
+
+$akrobatregular = "Akrobat Regular", Arial, sans-serif;
+$akrobatbold = "Akrobat Bold", Arial, sans-serif;
+$akrobatsemibold = "Akrobat Semibold", Arial, sans-serif;
+
+// general colors
+
+$red = #ff0000;
+$gray = #414042;
+$light = #e6e7e8;
+$white = #ffffff;
+$transparent = rgba(0, 0, 0, 0);
+
+// button block-main
+
+$bg-more = #f3f8fa;
+$white-more = #fff;
+$black-more = #282936;
+
+// news line
+
+$news_bg = $white;
+$news__element = #4D565B;
+$news__activeBorder = $red;
+$news__border = 1px;
+
+// media breaks
+
+// $break-small = screen and (max-width: 480px);
+// $break-middle = screen and (max-width: 960px);
+// $break-large = screen and (max-width: 1280px);
+
+transition-more($property = all, $duration = 0.45s, $ease = cubic-bezier(0.65, 0, 0.076, 1))
+  transition: $property $duration $ease;
+
+// icon mouse
+
+$colorBg = #222a30;
+$colorOutline = #ffffff;
+$colorOutlineFade = #4e5559;
+
+$widthMouse = 26px;
+$heightMouse = 40px;
+$borderMouse = 6px;
+
+$posMouse = 9px;
+$posText = 2px;
+
+$sizeTrackball = 4px;
+$posTrackball = 10px;
+$shrinkTrackball = 0.4;
+
+$animDuration = 5s;
+
+bgGradient() 
+  background:
+    $colorOutlineFade
+    linear-gradient(
+      transparent 0%,
+      transparent 50%,
+      $colorOutline 50%,
+      $colorOutline 100%
+    );
+
+@keyframes colorSlide { 
+  0% { background-position: 0% 100%; }
+  20% { background-position: 0% 0%; }
+  21% { background-color: $colorOutlineFade; }
+  29.99% { 
+    background-color: $colorOutline;
+    background-position: 0% 0%;
+  }
+  30% { 
+    background-color: $colorOutlineFade;
+    background-position: 0% 100%;
+  }
+  50% { background-position: 0% 0%; }
+  51% { background-color: $colorOutlineFade; }
+  59% { 
+    background-color: $colorOutline;
+    background-position: 0% 0%;
+  }
+  60% { 
+    background-color: $colorOutlineFade;
+    background-position: 0% 100%;
+  }
+  80% { background-position: 0% 0%; }
+  81% { background-color: $colorOutlineFade; }
+  90%, 100% { background-color: $colorOutline; }
+}
+
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  6% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  14% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  36% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  44% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  66% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  74% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+}
+
+@keyframes nudgeMouse {
+  0% { transform: translateY(0); }
+  20% { transform: translateY($posMouse); }
+  30% { transform: translateY(0); }
+  50% { transform: translateY($posMouse); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY($posMouse); }
+  90% { transform: translateY(0); }
+}
